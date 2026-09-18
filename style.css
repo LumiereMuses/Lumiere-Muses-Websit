@@ -1345,6 +1345,133 @@ footer {
 }
 
 
+.footer-links {
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    gap: 18px;
+
+    flex-wrap: wrap;
+}
+
+
+.footer-links a {
+    padding: 4px 0;
+
+    border-bottom: 1px solid transparent;
+
+    transition:
+        border-color 0.2s,
+        opacity 0.2s;
+}
+
+
+.footer-links a:hover {
+    border-color: currentColor;
+
+    opacity: 0.72;
+}
+
+
+
+/* =========================================
+   LEGAL PAGES
+========================================= */
+
+.legal-hero {
+    padding: clamp(72px, 12vw, 150px) 0 clamp(52px, 8vw, 92px);
+
+    border-bottom: 1px solid #d8d5ce;
+}
+
+
+.legal-hero h1 {
+    max-width: 900px;
+}
+
+
+.legal-intro {
+    max-width: 630px;
+
+    margin-top: 28px;
+
+    font-size: clamp(18px, 2.2vw, 24px);
+
+    line-height: 1.45;
+}
+
+
+.legal-content {
+    padding: clamp(52px, 9vw, 112px) 0;
+}
+
+
+.legal-copy {
+    max-width: 790px;
+}
+
+
+.legal-meta {
+    margin-bottom: 34px;
+
+    color: #777777;
+
+    font-size: 11px;
+
+    letter-spacing: 1.5px;
+
+    text-transform: uppercase;
+}
+
+
+.legal-copy section {
+    padding: 30px 0;
+
+    border-top: 1px solid #d8d5ce;
+}
+
+
+.legal-copy h2 {
+    margin-bottom: 14px;
+
+    font-size: clamp(30px, 4vw, 46px);
+
+    letter-spacing: -1px;
+}
+
+
+.legal-copy p,
+.legal-copy li {
+    max-width: 720px;
+
+    font-size: 16px;
+}
+
+
+.legal-copy p + p {
+    margin-top: 14px;
+}
+
+
+.legal-copy ul {
+    display: grid;
+
+    gap: 10px;
+
+    margin: 16px 0 0 20px;
+
+    color: #666666;
+}
+
+
+.legal-copy a {
+    border-bottom: 1px solid currentColor;
+}
+
+
 
 /* =========================================
    TABLET
@@ -2358,6 +2485,106 @@ img {
     .cookie-banner-button {
         width: 100%;
     }
+}
+
+
+
+/* =========================================
+   EQUIPMENT KIT CONTENTS
+========================================= */
+
+.equipment-contents {
+    margin-top: 14px;
+
+    border-top: 1px solid #d8d5ce;
+}
+
+
+.equipment-contents summary {
+    display: flex;
+
+    min-height: 44px;
+
+    align-items: center;
+    justify-content: space-between;
+
+    color: #111111;
+
+    cursor: pointer;
+
+    font-size: 11px;
+    font-weight: bold;
+    letter-spacing: 1px;
+    list-style: none;
+    text-transform: uppercase;
+}
+
+
+.equipment-contents summary::-webkit-details-marker {
+    display: none;
+}
+
+
+.equipment-contents summary::after {
+    color: #5f5e59;
+
+    content: "+";
+
+    font-size: 18px;
+    font-weight: normal;
+    line-height: 1;
+
+    transition: transform 0.2s ease;
+}
+
+
+.equipment-contents[open] summary::after {
+    content: "−";
+
+    transform: rotate(180deg);
+}
+
+
+.equipment-contents summary:hover {
+    color: #8a5d18;
+}
+
+
+.equipment-contents-body {
+    padding: 1px 0 4px;
+}
+
+
+.equipment-contents-label {
+    margin: 12px 0 5px;
+
+    color: #5f5e59;
+
+    font-size: 10px !important;
+    font-weight: bold;
+    letter-spacing: 1.1px;
+    text-transform: uppercase;
+}
+
+
+.equipment-contents-label:first-child {
+    margin-top: 0;
+}
+
+
+.equipment-contents ul {
+    margin: 0;
+    padding-left: 17px;
+
+    color: #5f5e59;
+
+    font-size: 12px;
+    line-height: 1.5;
+}
+
+
+.equipment-contents li::marker {
+    color: #8a5d18;
 }
 
 
