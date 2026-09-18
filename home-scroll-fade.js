@@ -17,9 +17,18 @@
     const updateOpacity = () => {
         const fadeDistance = Math.max(hero.offsetHeight * 0.65, 360);
         const progress = Math.min(window.scrollY / fadeDistance, 1);
+        const isEffectivelyHidden = progress > 0.96;
 
         content.style.opacity = String(1 - progress);
-        content.style.pointerEvents = progress > 0.96 ? "none" : "";
+        content.style.pointerEvents = isEffectivelyHidden ? "none" : "";
+
+        if (isEffectivelyHidden) {
+            content.inert = true;
+            content.setAttribute("aria-hidden", "true");
+        } else {
+            content.inert = false;
+            content.removeAttribute("aria-hidden");
+        }
 
         isQueued = false;
     };

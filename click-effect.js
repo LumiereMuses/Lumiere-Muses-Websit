@@ -21,10 +21,23 @@
         bloom.style.left = `${event.clientX}px`;
         bloom.style.top = `${event.clientY}px`;
 
-        bloom.addEventListener("animationend", () => bloom.remove(), {
+        let fallbackTimer;
+
+        const removeBloom = () => {
+            window.clearTimeout(fallbackTimer);
+            bloom.remove();
+        };
+
+        bloom.addEventListener("animationend", removeBloom, {
+            once: true,
+        });
+
+        bloom.addEventListener("animationcancel", removeBloom, {
             once: true,
         });
 
         document.body.append(bloom);
+
+        fallbackTimer = window.setTimeout(removeBloom, 800);
     });
 })();
