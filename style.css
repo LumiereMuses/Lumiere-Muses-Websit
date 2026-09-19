@@ -654,6 +654,13 @@ p {
 }
 
 
+.review-actions {
+    justify-content: center;
+
+    margin-top: 25px;
+}
+
+
 
 /* =========================================
    PROJECTS
